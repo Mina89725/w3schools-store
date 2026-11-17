@@ -1,0 +1,21 @@
+# Build output
+/dist
+/out-tsc
+/.angular/cache
+/coverage
+
+# Node
+/node_modules
+npm-debug.log
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.history/
+
+# System files
+.DS_Store
+Thumbs.db

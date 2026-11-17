@@ -1,0 +1,32 @@
+<header class="page-header">
+  <h1>Products</h1>
+  <p class="lead">Fine foods and drinks, straight from the w3schools database.</p>
+</header>
+
+@if (products.isLoading()) {
+  <p class="message" role="status">Loading products…</p>
+} @else if (products.error()) {
+  <div class="message message-error" role="alert">
+    <h2>The products could not be loaded</h2>
+    <p>
+      The store cannot reach the REST API. Check that it is running: open a terminal in
+      <code>~/w3schools-database</code> and run <code>docker-compose up -d</code>.
+    </p>
+    <button type="button" (click)="products.reload()">Try again</button>
+  </div>
+} @else if (products.value()?.length === 0) {
+  <p class="message" role="status">There are no products in the database yet.</p>
+} @else {
+  <ul class="card-grid">
+    @for (product of products.value(); track product.ProductID) {
+      <li class="card">
+        <p class="product-number">No. {{ product.ProductID }}</p>
+        <h2 class="product-name">{{ product.ProductName }}</h2>
+        <p class="product-unit">{{ product.Unit }}</p>
+        <p class="product-price">
+          <span class="currency">CHF</span> {{ product.Price | number: '1.2-2' }}
+        </p>
+      </li>
+    }
+  </ul>
+}

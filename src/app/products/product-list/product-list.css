@@ -1,0 +1,35 @@
+.product-number {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.product-name {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.375rem;
+}
+
+.product-unit {
+  flex: 1;
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+}
+
+.product-price {
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-line);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-accent);
+}
+
+.currency {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}

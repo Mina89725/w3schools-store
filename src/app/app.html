@@ -1,0 +1,15 @@
+<header class="site-header">
+  <a class="brand" routerLink="/">w3schools<span class="brand-suffix">-store</span></a>
+  <nav aria-label="Main">
+    <a routerLink="/products" routerLinkActive="active" ariaCurrentWhenActive="page">Products</a>
+    <a routerLink="/shippers/new" routerLinkActive="active" ariaCurrentWhenActive="page">New shipper</a>
+  </nav>
+</header>
+
+<main class="site-main">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>Data from the w3schools sample database</p>
+</footer>

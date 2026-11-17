@@ -1,0 +1,62 @@
+<header class="page-header">
+  <h1>New shipper</h1>
+  <p class="lead">Add a delivery company to the w3schools database.</p>
+</header>
+
+<form class="form" [formRoot]="shipperForm">
+  <div class="form-field">
+    <label for="shipper-name">Name</label>
+    <input
+      id="shipper-name"
+      [formField]="shipperForm.ShipperName"
+      [attr.aria-invalid]="showsError(shipperForm.ShipperName)"
+      aria-describedby="shipper-name-error"
+    />
+    @if (showsError(shipperForm.ShipperName)) {
+      <p class="field-error" id="shipper-name-error">
+        {{ shipperForm.ShipperName().errors()[0].message }}
+      </p>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="shipper-phone">Phone</label>
+    <input
+      id="shipper-phone"
+      type="tel"
+      [formField]="shipperForm.Phone"
+      [attr.aria-invalid]="showsError(shipperForm.Phone)"
+      aria-describedby="shipper-phone-error"
+    />
+    @if (showsError(shipperForm.Phone)) {
+      <p class="field-error" id="shipper-phone-error">
+        {{ shipperForm.Phone().errors()[0].message }}
+      </p>
+    }
+  </div>
+
+  <button type="submit">Save shipper</button>
+</form>
+
+@if (savedShipperId()) {
+  <p class="message message-success" role="status">
+    The shipper was saved as no. {{ savedShipperId() }}.
+  </p>
+}
+
+@if (refusal()) {
+  <div class="message message-error" role="alert">
+    <h2>The shipper could not be saved</h2>
+    <p>The REST API refused it: {{ refusal() }}</p>
+  </div>
+}
+
+@if (saveFailed()) {
+  <div class="message message-error" role="alert">
+    <h2>The shipper could not be saved</h2>
+    <p>
+      The store cannot reach the REST API. Check that it is running: open a terminal in
+      <code>~/w3schools-database</code> and run <code>docker-compose up -d</code>. Then save again.
+    </p>
+  </div>
+}
