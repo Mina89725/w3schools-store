@@ -237,6 +237,12 @@ fixture.detectChanges();
 `docker-compose up -d` in `~/w3schools-database`, wait a few seconds and press
 **Try again**. `docker-compose ps` shows whether both containers are up.
 
+**The page says "The products could not be loaded"** but the `npm start` terminal shows no
+proxy error: the REST API is running, but the database behind it is still starting, which takes
+a few seconds after `docker-compose up -d`. Wait a few seconds and press **Try again**. If the
+message stays after a minute, `docker-compose ps` in `~/w3schools-database` shows whether both
+containers are up.
+
 **`Port 4200 is already in use.`** followed by `Would you like to use a different port?`:
 another `npm start` is still running, often in a second terminal or in VS Code. Stop it with
 `Ctrl+C` there, or answer `y` to use another port.
