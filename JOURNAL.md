@@ -12,11 +12,9 @@ Allein: «Wie ich Git einsetze» statt «Wie wir Git einsetzen».
 
 <!-- Jede Person schreibt unter ihren Vornamen 1–2 Sätze: Was will ich in der Projektarbeit lernen oder erreichen? -->
 
-### <Mina Bleve>
+### Mina Bleve 
 
-### <Patricia Thillaiyampalam-Kocher>
-
-### <Vorname 3>
+### Patricia Thillaiyampalam-Kocher
 
 ## Konzept
 
