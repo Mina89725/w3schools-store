@@ -18,15 +18,29 @@ Allein: «Wie ich Git einsetze» statt «Wie wir Git einsetzen».
 
 ## Konzept
 
-<!-- 1–2 Sätze: Was kann Eure Anwendung am Ende zusätzlich, und mit welchen Entities (z. B. categories, customers)? Die fertigen Use Cases beschreibt Ihr in README.md. -->
+Die bestehende Webanwendung wird um eine Kunden- und eine 
+Lieferantenansicht erweitert, wobei Kunden Produkte suchen, 
+filtern und sortieren können, während Lieferanten ihre Produkte 
+und Kategorien erfassen, bearbeiten und löschen können.
+Hierfür werden die Entities products, categories, suppliers 
+und customers verwendet.
 
 ## Vorgehen
 
-<!-- 1–2 Sätze: In welcher Reihenfolge baut Ihr die Use Cases, und wer übernimmt welchen? -->
+Zuerst setzen wir die GET-Use-Cases zur Anzeige der Kategorien, 
+Kunden und Lieferanten um, anschliessend die POST-, PATCH- und 
+DELETE-Use-Cases zur Sortimentsverwaltung. Abschliessend 
+implementieren wir die Produktsuche, den Kategoriefilter und 
+die Preissortierung.
 
 ### Wie wir Git einsetzen
 
-<!-- 1–2 Sätze: Wie benennt Ihr Branches, und wer reviewt welchen Pull Request? Ändert sich Euer Vorgehen, ergänzt Ihr den Abschnitt mit Datum und Grund. -->
+Für jeden Use Case erstellen wir einen eigenen Branch mit 
+einer eindeutigen Bezeichnung (z. B. feature/get-customers 
+oder feature/delete-product). Nach erfolgreicher Umsetzung 
+und Prüfung wird ein Pull Request erstellt, welcher von 
+einem anderen Gruppenmitglied geprüft und in den Main-Branch 
+gemergt wird.
 
 ## Einträge
 
